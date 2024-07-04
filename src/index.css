@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 h1,
 h2,
 h3,
@@ -10,6 +12,7 @@ p {
 
 ul,
 ol {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -19,12 +22,24 @@ img {
   max-width: 100%;
 }
 
+button,
+a {
+  font-family: inherit;
+}
+
 :root {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #101828;
+  background-color: #fff;
+  line-height: 150%;
+
   --color-black: #101828;
-  --color-grey: #475467;
-  --color-red: #e44848;
-  --color-red-alt: #d84343;
-  --color-yellow: #ffc531;
-  --color-light-grey: #f2f4f7;
-  --color-white: #f7f7f7;
+  --color-text: #475467;
+  --color-button: #e44848;
+  --color-button-alt: #d84343;
+  --color-rating: #ffc531;
+  --color-features: #f2f4f7;
+  --color-inputs: #f7f7f7;
 }
