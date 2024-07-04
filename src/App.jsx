@@ -1,7 +1,7 @@
-import './App.css';
+import RootRouting from '../routers/RootRouting';
 
 function App() {
-  return <></>;
+  return <RootRouting />;
 }
 
 export default App;

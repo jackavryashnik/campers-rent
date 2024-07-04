@@ -18,3 +18,13 @@ img {
   display: block;
   max-width: 100%;
 }
+
+:root {
+  --color-black: #101828;
+  --color-grey: #475467;
+  --color-red: #e44848;
+  --color-red-alt: #d84343;
+  --color-yellow: #ffc531;
+  --color-light-grey: #f2f4f7;
+  --color-white: #f7f7f7;
+}
