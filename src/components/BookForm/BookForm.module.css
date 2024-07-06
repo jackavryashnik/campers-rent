@@ -1,0 +1,20 @@
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input,
+.inputWrapperCalendar {
+  border-radius: 10px;
+  padding: 18px;
+  width: 400px;
+  height: 56px;
+  background-color: var(--color-inputs);
+  border: none;
+}
+
+.input[name='comment'] {
+  height: 114px;
+  resize: none;
+}

@@ -1,3 +1,4 @@
+import Features from '../Features/Features';
 import css from './Card.module.css';
 import icons from '../../images/sprite.svg';
 
@@ -40,7 +41,7 @@ const Card = ({ obj }) => {
           <span key={index} className={css.img} style={{ backgroundImage: `url(${img})` }}></span>
         ))}
       </div>
-      
+
       <p className={css.description}>{obj.description}</p>
 
       <nav className={css.navButtons}>
@@ -52,6 +53,7 @@ const Card = ({ obj }) => {
         </button>
       </nav>
       <hr className={css.line} />
+      <Features details={obj.details} />
     </div>
   );
 };

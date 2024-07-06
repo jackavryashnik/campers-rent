@@ -1,0 +1,28 @@
+.btn {
+  border-radius: 200px;
+  padding: 16px 60px;
+  width: 173px;
+  height: 56px;
+}
+
+.transparent {
+  background-color: transparent;
+  border: 1px solid rgba(71, 84, 103, 0.2);
+}
+
+.transparent:hover,
+.transparent:focus {
+  border-color: var(--color-button);
+}
+
+.filled {
+  color: #fff;
+  background-color: var(--color-button);
+  border: 1px solid var(--color-button);
+}
+
+.filled:hover,
+.filled:focus {
+  background-color: var(--color-button-alt);
+  border-color: var(--color-button-alt);
+}
