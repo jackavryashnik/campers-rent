@@ -4,6 +4,7 @@ import { useId } from 'react';
 import * as Yup from 'yup';
 import css from './BookForm.module.css';
 import Calendar from '../Calendar/Calendar';
+import { Toaster, toast } from 'react-hot-toast';
 
 const validationSchema = Yup.object({
   name: Yup.string().required('Required'),
@@ -13,7 +14,9 @@ const validationSchema = Yup.object({
 });
 
 const handleBook = async (values, actions) => {
-  return 'Booked';
+  console.log(values);
+  toast.success('Camper successfully booked!');
+  actions.resetForm();
 };
 
 const BookForm = () => {
@@ -25,6 +28,8 @@ const BookForm = () => {
       validationSchema={validationSchema}
     >
       <Form className={css.form}>
+        <h2 className={css.title}>Book your campervan now</h2>
+        <p className={css.text}>Stay connected! We are always ready to help you.</p>
         <div className={css.inputs}>
           <div className={css.inputWrapper}>
             <Field type="text" name="name" id={`${bookFormId}-name`} className={css.input} placeholder="Name" />
@@ -58,6 +63,7 @@ const BookForm = () => {
         <Button type="submit" style="filled">
           Send
         </Button>
+        <Toaster position="top-center" />
       </Form>
     </Formik>
   );
