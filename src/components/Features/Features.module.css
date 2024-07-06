@@ -1,0 +1,53 @@
+
+
+.pins {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  height: fit-content;
+  margin-bottom: 44px;
+}
+
+.icon {
+  fill: transparent;
+  stroke: #000;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  padding: 12px 18px;
+  height: 44px;
+  mix-blend-mode: multiply;
+  background: var(--color-features);
+}
+
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.line {
+  color: rgba(16, 24, 40, 0.2);
+  height: 1px;
+  width: 100%;
+  margin: 24px 0;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.listItem > p {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+}

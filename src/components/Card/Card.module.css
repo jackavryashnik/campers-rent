@@ -1,4 +1,4 @@
-.container {
+.card {
   position: relative;
   margin: 0 auto;
   border-radius: 20px;
@@ -108,4 +108,16 @@
   color: rgba(16, 24, 40, 0.2);
   height: 1px;
   width: 100%;
+  margin: 0;
+}
+
+.star {
+  stroke: var(--color-rating);
+  fill: var(--color-rating);
+}
+
+.container {
+  display: flex;
+  gap: 16px;
+  padding-top: 44px;
 }

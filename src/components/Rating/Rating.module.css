@@ -1,0 +1,4 @@
+.star {
+  stroke: var(--color-features);
+  fill: var(--color-features);
+}
