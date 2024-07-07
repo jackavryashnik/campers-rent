@@ -1,0 +1,83 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  gap: 64px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.inputsGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+}
+
+.inputsGroupName {
+  font-weight: 500;
+  color: rgba(16, 24, 40, 0.6);
+  margin-bottom: 8px;
+}
+
+.input[type='text'] {
+  border-radius: 10px;
+  padding: 18px;
+  padding-left: 44px;
+  width: 400px;
+  height: 56px;
+  background-color: var(--color-inputs);
+  border: none;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
+  padding: 17px 18px;
+  height: 95px;
+  min-width: 100px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.label:hover {
+  background-color: lightgray;
+}
+
+.input[type='checkbox'] {
+  display: none;
+}
+
+.input[type='checkbox']:checked + .label {
+  border-color: var(--color-button);
+}
+
+.inputsGroupTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 24px;
+}
+
+.line {
+  color: rgba(16, 24, 40, 0.2);
+  height: 1px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.locationContainer {
+  position: relative;
+}
+
+.mapPin {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+}
