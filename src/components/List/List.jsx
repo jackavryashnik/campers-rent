@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import PreviewCard from '../../components/PreviewCard/PreviewCard';
 import css from './List.module.css';
 import { getCampers } from '../../utils/api';

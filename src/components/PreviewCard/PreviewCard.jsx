@@ -1,11 +1,27 @@
-import css from './PreviewCard.module.css';
 import icons from '../../images/sprite.svg';
 import { useState } from 'react';
 import Button from '../Button/Button';
 import FeatureItem from '../FeatureItem/FeatureItem';
+import Card from '../Card/Card';
+import Modal from '../Modal/Modal';
+import css from './PreviewCard.module.css';
 
 const PreviewCard = ({ camper }) => {
   const [favorite, setFavorite] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleFavorite = () => {
+    setFavorite(!favorite);
+  };
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div className={css.container}>
       <div style={{ backgroundImage: `url(${camper.gallery[0]})` }} alt={`${camper.name} image`} className={css.img} />
@@ -15,7 +31,7 @@ const PreviewCard = ({ camper }) => {
             <h2 className={css.name}>{camper.name}</h2>
             <span className={css.priceBtnContainer}>
               <p className={css.price}>€{camper.price}</p>
-              <button className={css.btn} onClick={() => setFavorite(!favorite)}>
+              <button className={css.btn} onClick={toggleFavorite}>
                 <svg height={24} width={24}>
                   <use href={`${icons}#icon-${favorite ? 'heart-red' : 'heart'}`}></use>
                 </svg>
@@ -81,8 +97,14 @@ const PreviewCard = ({ camper }) => {
           </FeatureItem>
         </div>
 
-        <Button>Show more</Button>
+        <Button onClick={openModal}>Show more</Button>
       </div>
+
+      {showModal && (
+        <Modal onClose={closeModal}>
+          <Card camper={camper} onClose={closeModal} />
+        </Modal>
+      )}
     </div>
   );
 };
