@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  gap: 24px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 20px;
+  padding: 24px;
+  width: 888px;
+  height: 358px;
+  background-color: #fff;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.img {
+  border-radius: 10px;
+  width: 290px;
+  height: 310px;
+  background-position: center;
+  background-size: cover;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+}
+
+.priceBtnContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  display: block;
+}
+
+.undertitle {
+  display: flex;
+  gap: 16px;
+}
+
+.star {
+  fill: var(--color-rating);
+  stroke: var(--color-rating);
+  margin-right: 4px;
+}
+
+.undertitle > span {
+  display: flex;
+  align-items: center;
+}
+
+.rating > p {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  display: inline;
+}
+
+.location {
+  fill: #fff;
+  stroke: #000;
+}
+
+.description {
+  width: 526px;
+  height: 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--color-text);
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

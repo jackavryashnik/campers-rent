@@ -1,0 +1,12 @@
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  padding: 12px 18px;
+  height: 44px;
+  width: fit-content;
+  mix-blend-mode: multiply;
+  background: var(--color-features);
+}
