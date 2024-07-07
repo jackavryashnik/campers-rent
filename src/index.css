@@ -27,6 +27,11 @@ a {
   font-family: inherit;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 :root {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
