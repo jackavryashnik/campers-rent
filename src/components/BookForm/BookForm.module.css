@@ -39,3 +39,12 @@
   height: 114px;
   resize: none;
 }
+
+.heroTitle,
+.heroText {
+  color: #fff;
+}
+
+.heroForm {
+  border: none;
+}

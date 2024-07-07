@@ -1,0 +1,40 @@
+.hero {
+  background-image: url('../../images/hero.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 572px;
+  height: fit-content;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about {
+  order: -1;
+  padding: 24px;
+  text-align: center;
+  height: fit-content;
+  background-color: rgba(16, 24, 40, 0.5);
+  border-radius: 16px;
+  color: #fff;
+}
+
+.title {
+  margin-bottom: 24px;
+}
+
+@media screen and (max-width: 448px) {
+  .form {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 970px) {
+  .about {
+    order: 0;
+    width: 50%;
+  }
+}

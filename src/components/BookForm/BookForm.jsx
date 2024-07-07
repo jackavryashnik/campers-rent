@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import css from './BookForm.module.css';
 import Calendar from '../Calendar/Calendar';
 import { Toaster, toast } from 'react-hot-toast';
+import clsx from 'clsx';
 
 const validationSchema = Yup.object({
   name: Yup.string().required('Required'),
@@ -19,7 +20,7 @@ const handleBook = async (values, actions) => {
   actions.resetForm();
 };
 
-const BookForm = () => {
+const BookForm = ({ hero }) => {
   const bookFormId = useId();
   return (
     <Formik
@@ -27,9 +28,9 @@ const BookForm = () => {
       onSubmit={handleBook}
       validationSchema={validationSchema}
     >
-      <Form className={css.form}>
-        <h2 className={css.title}>Book your campervan now</h2>
-        <p className={css.text}>Stay connected! We are always ready to help you.</p>
+      <Form className={clsx(css.form, hero && css.heroForm)}>
+        <h2 className={clsx(css.title, hero && css.heroTitle)}>Book your campervan now</h2>
+        <p className={clsx(css.text, hero && css.heroText)}>Stay connected! We are always ready to help you.</p>
         <div className={css.inputs}>
           <div className={css.inputWrapper}>
             <Field type="text" name="name" id={`${bookFormId}-name`} className={css.input} placeholder="Name" />
