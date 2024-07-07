@@ -7,7 +7,4 @@ export default defineConfig({
   build: {
     sourcemap: true,
   },
-  server: {
-    sourcemapIgnoreList: (sourcePath, sourcemapPath) => false,
-  },
 });

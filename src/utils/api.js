@@ -8,7 +8,6 @@ export const getCampers = async () => {
     if (!data || data.length === 0) {
       throw new Error('Campers not found');
     }
-    console.log(data);
 
     return data;
   } catch (error) {
